@@ -25,12 +25,26 @@ source("Import_GSS2016_haven.R")
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-
-
+  
+  
 #Polyview
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
+```{r}
+source("makeTables2016.R")
+barchartGC(xsex_polv,type="percent")
+```
+    
+According to the barchart, liberals are most comfortable with sex while conservatives are least comfortable with sex, seen with the striking numerical difference.  
+
+```{r}
+chisqtestGC(xsex_polv,graph=TRUE)
+``` 
+   
+  With the p-value at 0, theres no way we'd be able to accept the null hypothesis.  
+  
+  
 #Relationship Status
 
 
