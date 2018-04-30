@@ -25,7 +25,26 @@ source("Import_GSS2016_haven.R")
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+```{r}
+source("makeTables2016.R")
+barchartGC(xsex_sex,type="percent")
+```
 
+  
+  The trend for males appears to be going upward through the graph as they think its okay, while in opposition females appear to be going downward; projecting that they don't think its okay.  
+  
+```{r}
+rowPerc(xsex_sex)
+colPerc(xsex_sex)
+```
+  
+In row percent, males appear to be getting larger as you go from wrong to okay, while females appear to be getting smaller.   
+
+```{r}
+chisqtestGC(xsex_sex,graph=TRUE)
+```
+  
+  The p-value of 0.0351 is low, therefore indicating if the null hypothesis was true we would get it 35 times out of 1000. We then choose to reject the null hypothesis.  
 
 #Polyview
 
