@@ -31,6 +31,27 @@ source("Import_GSS2016_haven.R")
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
+```{r}
+source("makeTables2016.R")
+barchartGC(xsex_polv,type="percent")
+```
+  
+According to the barchart, liberals are most comfortable with sex while conservatives are least comfortable with sex, seen with the striking numerical difference.
+  
+```{r}
+rowPerc(xsex_polv)
+colPerc(xsex_polv)
+```
+  
+  Liberals who think its wrong start low and increase, but then they start to decrease again. However, moderates appear to start high then level out across hmm to okay. Lastly, conservatives appear to follow the trend as they start high, level out from hmm to okay. This shows the similarities in moderate to conservatives, while the liberals go in the opposite direction.  
+  
+```{r}
+chisqtestGC(xsex_polv,graph=TRUE)
+```
+    
+    
+  With the extremely low p-value, it is easy to note the chances of this rarely occurring. This helps us choose to reject the null hypothesis.
+
 #Relationship Status
 
 
