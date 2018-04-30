@@ -32,10 +32,28 @@ source("Import_GSS2016_haven.R")
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
 #Relationship Status
+```{r}
+source("makeTables2016.R")
+barchartGC(xmsex_table,type="percent")
+```
+   
+  In the above graph, we can see in the column titled "hooked up" that it is going downward on the graph. While on the other hand, the column titled "single" appears to be going upward.  
+  
+```{r}
+colPerc(xmsex_table)
+rowPerc(xmsex_table)
+```
+  
+  The trend is smaller for people in a relationship as we go across, while its bigger for those single as we go from wrong to okay.  
+    
+```{r}
+chisqtestGC(xmsex_table,graph=TRUE,simulate.p.value = TRUE)
+``` 
+  
+  This says that if the null hypothesis was true, it would happen only 7 1/2 out of a thousand, therefore we choose to reject the null hypothesis using the evidence. 
+  
 
-
-
-
+  
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
